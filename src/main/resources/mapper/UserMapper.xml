@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间输入对应接口位置-->
+<mapper namespace="com.cloud.justyou.mapper.UserMapper">
+
+<!--    这里的Users需要在 application.properties 中设置别名-->
+
+    <select id="login" resultType="Users">
+        select * from users where user_name=#{param1} and  user_password=#{param2}
+    </select>
+
+    <insert id="register">
+        insert into users(user_id,user_name,user_password,user_email,user_birthday,user_telephone_number,user_nickname)
+        values (#{user_id},#{user_name},#{user_password},#{user_email},#{user_birthday},#{user_telephone_number},#{user_nickname})
+    </insert>
+
+</mapper>

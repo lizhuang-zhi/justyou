@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间输入对应接口位置-->
+<mapper namespace="com.cloud.justyou.mapper.IndexMapper">
+
+    <!--    这里的Task需要在 application.properties 中设置别名-->
+    <select id="selectTaskInfo" resultType="Task">
+        select * from task
+    </select>
+
+    <select id="getAll" resultType="Task">
+        select * from task
+        <where>
+            <if test="task_id != 0">
+                task_id = #{task_id}
+            </if>
+        </where>
+    </select>
+
+</mapper>
