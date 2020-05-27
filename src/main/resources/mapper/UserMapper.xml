@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
@@ -16,4 +17,20 @@
         values (#{user_id},#{user_name},#{user_password},#{user_email},#{user_birthday},#{user_telephone_number},#{user_nickname})
     </insert>
 
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cloud.justyou.mapper.UserMapper">
+    <update id="updateOne" parameterType="com.cloud.justyou.model.User">
+        update users set values(#{user.userQqNumber},#{user.userName},#{user.userNickName},#{user.userPassword},
+        #{user.userEmail},#{user.userProfilePhoto},#{user.userRegistrationTime},#{user.userBirthday},
+        #{user.userTelephoneNumber},#{user.personalSignature})
+    </update>
+    <select id="selectOne" parameterType="java.lang.Integer" resultType="com.cloud.justyou.model.User">
+        select * from users where user_id = #{userId}
+    </select>
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 </mapper>

@@ -1,5 +1,6 @@
 package com.cloud.justyou.mapper;
 
+<<<<<<< HEAD
 import com.cloud.justyou.model.Users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -45,4 +46,26 @@ public interface UserMapper {
                   @Param("user_birthday") Date user_birthday,
                   @Param("user_telephone_number") String user_telephone_number,
                   @Param("user_nickname") String user_nickname);
+=======
+import com.cloud.justyou.model.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * @author HP
+ */
+@Mapper
+public interface UserMapper {
+    /**
+     * 更新一个用户
+     * @param user 插入用户
+     */
+    boolean updateOne(@Param("user") User user);
+
+    /**
+     * @param userId 用户id
+     * @return 用户信息
+     */
+    User selectOne(@Param("userId") int userId);
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 }

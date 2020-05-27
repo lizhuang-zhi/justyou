@@ -1,5 +1,6 @@
 package com.cloud.justyou.controller.fore;
 
+<<<<<<< HEAD
 import com.cloud.justyou.controller.util_controller.BaseController;
 import com.cloud.justyou.model.BigSorts;
 import com.cloud.justyou.model.SmallSorts;
@@ -226,6 +227,16 @@ public class IndexController {
         //跳转个人主页
         return "";
     }
+=======
+import org.springframework.stereotype.Controller;
+
+/**
+ * @author HP
+ */
+@Controller
+public class IndexController {
+
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 
 
 }

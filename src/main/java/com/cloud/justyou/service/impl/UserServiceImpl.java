@@ -1,11 +1,16 @@
 package com.cloud.justyou.service.impl;
 
 import com.cloud.justyou.mapper.UserMapper;
+<<<<<<< HEAD
 import com.cloud.justyou.model.Users;
+=======
+import com.cloud.justyou.model.User;
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 import com.cloud.justyou.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 @Service
@@ -39,4 +44,24 @@ public class UserServiceImpl implements UserService {
     }
 
 
+=======
+/**
+ * @author HP
+ * @noinspection ALL
+ */
+@Service
+public class UserServiceImpl implements UserService {
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public boolean update(User user) {
+        return userMapper.updateOne(user);
+    }
+
+    @Override
+    public User get(int userId) {
+        return userMapper.selectOne(userId);
+    }
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 }

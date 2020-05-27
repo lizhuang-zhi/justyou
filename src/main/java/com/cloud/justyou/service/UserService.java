@@ -1,5 +1,6 @@
 package com.cloud.justyou.service;
 
+<<<<<<< HEAD
 import com.cloud.justyou.model.Users;
 
 import java.util.Date;
@@ -25,4 +26,24 @@ public interface UserService {
      */
     void register(long user_id, String user_password,String user_name, String user_email, Date user_birthday, String user_telephone_number, String user_nickname);
 
+=======
+import com.cloud.justyou.model.User;
+
+/**
+ * @author HP
+ */
+public interface UserService {
+    /**
+     * 保存用户信息
+     * @param user 更新的用户信息
+     */
+    boolean update(User user);
+
+    /**
+     * 根据用户id获取用户信息
+     * @param userId 用户Id
+     * @return 用户信息
+     */
+    User get(int userId);
+>>>>>>> 9520ddb0b720bff4fce0c6127f076862f7cccd2b
 }
